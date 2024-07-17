@@ -40,6 +40,7 @@ const User = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  console.log(users);
   // a loading until the data is fetched
   if (loading) {
     return <Loading />;
@@ -59,8 +60,7 @@ const User = () => {
                 {user.name.first + ' ' + user.name.last}
               </h1>
               <p className="text-left text-lg">
-                <span className="font-semibold">{user.registered.age}</span>{' '}
-                Years
+                <span className="font-semibold">{user.dob.age}</span> Years
               </p>
             </div>
           </div>
